@@ -16,6 +16,11 @@ export class TransacaoService {
         bandeira = 'ELO | VISA | MASTER';
         motivo = 'Não autorizada - Saldo/Limite Insuficiente';
         break;
+        case '7':
+          case '07':
+        bandeira = 'VISA';
+        motivo = 'FRAUDE CONFIRMADA';
+        break;
       case '55':
         bandeira = 'ELO | VISA | MASTER';
         motivo = 'SENHA INVÁLIDA';
