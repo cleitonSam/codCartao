@@ -1,0 +1,18 @@
+<!-- transacao-info.component.html -->
+<div class="a">
+  <div class="logo-container">
+    <img src="../assets/Branco-Preto-MotionFit.png" alt="Logo" class="logo">
+  </div>
+  <div>
+    <div class="space">
+      <label for="codigo">Digite o código:</label>
+      <input type="text" id="codigo" [(ngModel)]="codigo" (keydown.enter)="onEnterKeyPress($event)" />
+      <button (click)="buscarInformacoes()">Buscar</button>
+    </div>
+  </div>
+  <div class="space">
+    <div class="resultado" *ngIf="resultado">
+      <p>{{ resultado }}</p>
+    </div>
+  </div>
+</div>
