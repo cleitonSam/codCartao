@@ -12,12 +12,13 @@ export class TransacaoService {
   
     switch (codigo) {
       case '5':
+      case '05':
       case '51':
         bandeira = 'ELO | VISA | MASTER';
         motivo = 'Não autorizada - Saldo/Limite Insuficiente';
         break;
         case '7':
-          case '07':
+        case '07':
         bandeira = 'VISA';
         motivo = 'FRAUDE CONFIRMADA';
         break;
@@ -55,10 +56,12 @@ export class TransacaoService {
         motivo = 'Comerciante Inválido - Transação não permitida - Não tente novamente';
         break;
       case '4':
+      case '04':
         bandeira = 'ELO ';
         motivo = 'Refazer a transação (emissor solicita retentativa) | VISA E MASTER - FRAUDE CONFIRMADA';
         break;
       case '6':
+      case '06':
         bandeira = 'Todas';
         motivo = 'Consultar credenciador - Lojista, contate o adquirente';
         break;
