@@ -6,7 +6,7 @@
   <div>
     <div class="space">
       <label for="codigo">Digite o código:</label>
-      <input type="number" id="codigo" [(ngModel)]="codigo" (keydown.enter)="onEnterKeyPress($event)" />
+      <input type="text" id="codigo" [(ngModel)]="codigo" (keydown.enter)="onEnterKeyPress($event)" />
       <button (click)="buscarInformacoes()">Buscar</button>
     </div>
   </div>
