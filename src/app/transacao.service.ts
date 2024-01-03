@@ -97,6 +97,10 @@ export class TransacaoService {
         bandeira = 'Todas';
         motivo = 'Cartão roubado - Transação não permitida - Não tente novamente';
         break;
+        case '46':
+        bandeira = 'VISA';
+        motivo = 'Conta encerrada';
+        break;
       case '54':
         bandeira = 'Todas';
         motivo = 'Cartão vencido / Data de expiração inválida - Verifique os dados do cartão';
@@ -124,6 +128,10 @@ export class TransacaoService {
       case '78':
         bandeira = 'Todas';
         motivo = 'Cartão novo sem desbloqueio - Desbloqueie o cartão';
+        break;
+        case '62':
+        bandeira = 'ELO | VISA';
+        motivo = 'Bloqueio temporario';
         break;
       case '82':
         bandeira = 'Todas';
