@@ -129,10 +129,6 @@ export class TransacaoService {
         bandeira = 'Todas';
         motivo = 'Cartão novo sem desbloqueio - Desbloqueie o cartão';
         break;
-        case '62':
-        bandeira = 'ELO | VISA';
-        motivo = 'Bloqueio temporario';
-        break;
       case '82':
         bandeira = 'Todas';
         motivo = 'Cartão inválido (criptograma)';
