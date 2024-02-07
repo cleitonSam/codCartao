@@ -1,18 +1,45 @@
 <!-- transacao-info.component.html -->
-<div class="a">
-  <div class="logo-container">
-    <img src="../assets/Branco-Preto-MotionFit.png" alt="Logo" class="logo">
-  </div>
-  <div>
-    <div class="space">
-      <label for="codigo">Digite o código:</label>
-      <input type="text" id="codigo" [(ngModel)]="codigo" (keydown.enter)="onEnterKeyPress($event)" />
-      <button (click)="buscarInformacoes()">Buscar</button>
+<body>
+  <div class="a">
+    <div class="logo-container">
+      <img src="../assets/Branco-Preto-MotionFit.png" alt="Logo" class="logo">
     </div>
-  </div>
-  <div class="space">
-    <div class="resultado" *ngIf="resultado">
-      <p>{{ resultado }}</p>
+    <div>
+      <div class="space">
+        <label for="codigo">Digite o código:</label>
+        <input type="text" id="codigo" [(ngModel)]="codigo" (keydown.enter)="onEnterKeyPress($event)" />
+        <button (click)="buscarInformacoes()">Buscar</button>
+      </div>
+     
+      <div class="space">
+        <div class="resultado" *ngIf="resultado">
+          <p>{{ resultado }}</p>
+        </div>
+      </div>
+      
+      <div class="space">
+        <div class="resultado" *ngIf="resultado">
+
+          <pdf-viewer src="../assets/pdfs/Bootstrap-vs-Material-Design-vs-Prime-vs-Tailwind.pdf"
+        [render-text]="true"
+        [original-size]="false"
+        style="width: 100%; height: 500px"
+></pdf-viewer>
+        </div>
+        
+
+      </div>
+      <div  class="space">
+        <label for="mensagem">Mensagem:</label>
+        <textarea class="text"  id="mensagem" [(ngModel)]="mensagem" placeholder="digite sua mensagem">{{a}}</textarea>
+        <label for="phoneNumber">Número de Telefone:</label>
+        <input type="text" id="phoneNumber" [(ngModel)]="phoneNumber" placeholder="Digite o número de telefone">
+        <button (click)="enviarMensagem()">Enviar Mensagem</button>
+      </div>
+      
     </div>
+    
   </div>
-</div>
+ 
+
+</body>
